@@ -1,15 +1,8 @@
-# 👷 `worker-template` Hello World
+# 👷 My Cloudflare Worker :)
 
-A template for kick starting a Cloudflare worker project.
+API:
+my-worker.zumaad.workers.dev/links -> returns a json array of links to some of my projects
+and 
+my-worker.zumaad.workers.dev/* -> returns html with my avatar, links to some of my projects, and some social links.
 
 [`index.js`](https://github.com/cloudflare/worker-template/blob/master/index.js) is the content of the Workers script.
-
-#### Wrangler
-
-To generate using [wrangler](https://github.com/cloudflare/wrangler)
-
-```
-wrangler generate projectname https://github.com/cloudflare/worker-template
-```
-
-Further documentation for Wrangler can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler).
