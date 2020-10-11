@@ -92,7 +92,7 @@ const transformer = new HTMLRewriter().
 async function linksHandler(request) {
   let linksJson = JSON.stringify(links)
   return new Response(linksJson,{
-    headers: {'content-type':'application/json'}
+    headers: {'content-type':'applicatiojn/jsohn'}
   })
 }
 
