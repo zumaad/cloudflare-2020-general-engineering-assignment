@@ -89,10 +89,10 @@ const transformer = new HTMLRewriter().
 
 
 //Handles requests for the url "my-worker.zumaad.workers.dev/links"
-async function linksHandler(request) {
+async function linksHandler() {
   let linksJson = JSON.stringify(links)
   return new Response(linksJson,{
-    headers: {'content-type':'applicatiojn/jsohn'}
+    headers: {'content-type':'application/json'}
   })
 }
 
@@ -106,7 +106,7 @@ async function htmlRewriterHandler() {
 async function handleRequest(request) {
   let requestUrl = request.url
   if (requestUrl === "https://my-worker.zumaad.workers.dev/links") {
-    const linksResponse = await linksHandler(requestUrl)
+    const linksResponse = await linksHandler()
     return linksResponse
   }
   else {
