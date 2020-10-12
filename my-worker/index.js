@@ -105,7 +105,8 @@ async function htmlRewriterHandler() {
 
 async function handleRequest(request) {
   let requestUrl = request.url
-  if (requestUrl === "https://my-worker.zumaad.workers.dev/links") {
+  if (requestUrl === "https://my-worker.zumaad.workers.dev/links" ||
+  requestUrl === "http://my-worker.zumaad.workers.dev/links") {
     const linksResponse = await linksHandler()
     return linksResponse
   }
